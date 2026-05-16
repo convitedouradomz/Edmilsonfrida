@@ -17,16 +17,16 @@
     <link rel="icon" type="image/x-icon" href="logoCD.jpg" />
     <style>
 :root {
-  --verde-oliva: #0a2b44;        /* Azul marinho (principal) */
-  --verde-oliva-suave: #1b4d6e;  /* Azul médio */
-  --verde-oliva-claro: #5FE4EA;  /* Azul turquesa (destaque) */
-  --creme: #f5f5f5;
-  --creme-claro: #fafafa;
+  --verde-oliva: #6d4830;        /* Castanho principal */
+  --verde-oliva-suave: #8b5e3c;  /* Castanho médio */
+  --verde-oliva-claro: #dfd0c2;  /* Fundo claro */
+  --creme: #f5ede4;              /* Creme suave */
+  --creme-claro: #faf5ef;
   --branco: #ffffff;
-  --dourado: #c9a03d;            /* Dourado suave */
+  --dourado: #c9a03d;            /* Dourado (mantém) */
   --dourado-claro: #dbb95c;
-  --cinza-escuro: #1a1a1a;
-  --cinza-medio: #4a4a4a;
+  --cinza-escuro: #2c2c2c;
+  --cinza-medio: #5a5a5a;
 }
 
       * {
@@ -42,7 +42,7 @@
       body {
         font-family: "Cormorant Garamond", serif;
         color: var(--cinza-escuro);
-        background-color: var(--branco);
+        background-color: #f5ede4;
         overflow-x: hidden;
         line-height: 1.6;
         font-weight: 400;
@@ -160,7 +160,7 @@
       #capa {
         background:
           linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)),
-          url("Capa.jpeg") center/cover no-repeat fixed;
+          url("Capa.jpeg") center/contain no-repeat fixed;
         color: var(--branco);
         min-height: 100vh;
         display: flex;
@@ -210,7 +210,7 @@
         line-height: 1.1;
         letter-spacing: 2px;
         animation: aparecer 2s ease-out;
-        color: #5FE4EA;
+        color: #ffffff;
       }
 
       @media (max-width: 768px) {
@@ -346,7 +346,7 @@
 
       /* MÚSICA E FOTO - SCROLL 2 (COM ANÉIS) */
       #musica {
-        background-color: var(--creme-claro);
+        background-color: #eee2b4;
         position: relative;
         overflow: hidden;
       }
@@ -444,6 +444,7 @@
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         transform: perspective(1000px) rotateY(0deg);
         transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        background-color: #f3dbc3; 
       }
 
       @media (max-width: 768px) {
@@ -560,15 +561,11 @@
       }
 
       /* TEXTO ROMÂNTICO - SCROLL 3 */
-      #texto-romantico {
-        background: linear-gradient(
-          135deg,
-          var(--creme) 0%,
-          var(--branco) 100%
-        );
-        position: relative;
-        overflow: hidden;
-      }
+     #texto-romantico {
+  background: #eee2b4;
+  position: relative;
+  overflow: hidden;
+}
 
       .texto-destaque {
         font-family: "Great Vibes", cursive;
@@ -623,7 +620,7 @@
 
       /* SAUDAÇÃO - SCROLL 4 */
       #saudacao {
-        background-color: var(--branco);
+        background-color: #eee2b4;
         position: relative;
       }
 
@@ -755,19 +752,15 @@
 
       .data-calendario-grande i {
         margin-right: 10px;
-        color: #5FE4EA;
+        color: var(--verde-oliva);
         font-size: 1.2rem;
       }
 
       /* OS NOIVOS - SCROLL 5 */
       #os-noivos {
-        background: linear-gradient(
-          135deg,
-          var(--creme) 0%,
-          var(--creme-claro) 100%
-        );
-        position: relative;
-      }
+  background: linear-gradient(135deg, #855e26 0%, #6d4830 100%);
+  position: relative;
+}
 
       .container-noivos {
         display: flex;
@@ -858,7 +851,6 @@
         height: 100%;
         object-fit: cover;
         transition: transform 0.8s ease;
-        filter: grayscale(100%);
       }
 
       .container-foto-noivo:hover .foto-noivo,
@@ -870,7 +862,7 @@
       .nome-noiva {
         font-family: "Playfair Display", serif;
         font-size: 1.8rem;
-        color: var(--verde-oliva);
+        color: #000000;
         margin-bottom: 10px;
         letter-spacing: 0.5px;
       }
@@ -933,7 +925,7 @@
 
       /* AGENDA - SCROLL 6 (COM ANIMAÇÃO ZIG-ZAG) */
       #agenda {
-        background-color: var(--branco);
+        background-color: #eee2b4;
         position: relative;
       }
 
@@ -1030,7 +1022,7 @@
       .icone-evento-elegante {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #5FE4EA, #3bc8ce);  /* Círculo turquesa */
+  background: linear-gradient(135deg, #6d4830, #8b5e3c);  /* Círculo turquesa */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1171,14 +1163,10 @@
 
       /* CONTADOR - SCROLL 7 */
       #contador {
-        background: linear-gradient(
-          135deg,
-          var(--verde-oliva-claro) 0%,
-          var(--creme) 100%
-        );
-        position: relative;
-        overflow: hidden;
-      }
+  background: #eee2b4;
+  position: relative;
+  overflow: hidden;
+}
 
       .contador-container-elegante {
         display: flex;
@@ -1256,13 +1244,13 @@
 
 .galeria-container-elegante {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin-top: 40px;
 }
 
 .galeria-item-elegante {
-  height: 320px;
+  height: 280px;
   width: 100%;
   overflow: hidden;
   border-radius: 8px;
@@ -1278,7 +1266,8 @@
 .galeria-img-elegante {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* MUDAR de contain para cover */
+  object-fit: cover;  /* Mostra a foto completa sem zoom */
+  background-color: var(--cor-fundo-claro);  /* Fundo para preencher espaços */
   transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -1291,7 +1280,7 @@
   }
   
   .galeria-item-elegante {
-    height: 200px;
+    height: 180px;
   }
 }
       .galeria-overlay {
@@ -1378,7 +1367,7 @@
 
       /* RSVP - SCROLL 9 */
       #rsvp {
-        background-color: var(--branco);
+        background-color: #eee2b4;
         position: relative;
       }
 
@@ -1423,12 +1412,8 @@
       }
 
       /* MENSAGENS - SCROLL 10 (COM SISTEMA DE ABAS) */
-      #mensagens {
-  background: linear-gradient(
-    135deg,
-    #eef4ff 0%,
-    #e0ecf8 100%
-  );
+     #mensagens {
+  background: #eee2b4;
   position: relative;
 }
 
@@ -1719,7 +1704,7 @@
 
       /* PRESENTES - SCROLL 11 */
       #presentes {
-        background-color: var(--branco);
+        background-color: #eee2b4;
         position: relative;
       }
 
@@ -1848,22 +1833,18 @@
 
       /* RODAPÉ - SCROLL FINAL */
       #rodape {
-        background: linear-gradient(
-          135deg,
-          var(--verde-oliva) 0%,
-          #6c7c4a 100%
-        );
-        color: white;
-        text-align: center;
-        padding: 30px 10px;
-        position: relative;
-        overflow: hidden;
-        min-height: 70vh;
-      }
+  background: #4a3320;  /* Castanho escuro sólido */
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+}
 
       .assinatura-elegante {
         font-family: "Parisienne", cursive;
-        font-size: 1rem;
+        font-size: 1.8rem;
         margin-bottom: 10px;
         position: relative;
         z-index: 1;
@@ -1954,10 +1935,9 @@
       .linha-pais {
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #5FE4EA, #3bc8ce, #5FE4EA);
+  background: linear-gradient(90deg, #c9a03d, #c9a03d, #c9a03d);
   margin: 12px auto 15px;
   border-radius: 2px;
-  box-shadow: 0 0 8px rgba(95, 228, 234, 0.6);  /* Efeito neon */
 }
 
       /* TEXTO DOS PAIS COM LETRA PRETA */
@@ -1970,7 +1950,7 @@
       }
 
       .pais-preto strong {
-        color: var(--verde-oliva);
+        color: #000000;
         font-weight: 600;
       }
 
@@ -2157,9 +2137,8 @@
 
 .icone-pulsante i {
   font-size: 3.5rem;
-  color: #5FE4EA;
+  color: var(--verde-oliva);
   /* REMOVER o background e o padding e o border-radius */
-  text-shadow: 0 0 5px rgba(113, 232, 238, 0.5);
 }
 
 @keyframes pulsarConvite {
@@ -2223,7 +2202,7 @@
   font-family: "Dancing Script", cursive;
   font-size: 2.8rem;
   line-height: 1.2;
-  color: #0a2b44;
+  color: #6d4830;
   text-align: center;
   margin-top: 20px;
   animation: subirDeBaixo 1.5s ease-out 0.8s forwards;
@@ -2277,7 +2256,7 @@
 
 .icone-presente-pulsante i {
   font-size: 3.5rem;
-  color: #5FE4EA;
+  color: var(--verde-oliva);
   animation: pulsarPresente 1.2s infinite ease-in-out;
   display: inline-block;
 }
@@ -2290,13 +2269,81 @@
   50% {
     transform: scale(1.15);
     opacity: 1;
-    text-shadow: 0 0 15px var(--dourado);
   }
 }
 
 @media (max-width: 768px) {
   .icone-presente-pulsante i {
     font-size: 2.5rem;
+  }
+}
+/* AJUSTE PARA CELULAR - FOTO CAPA COMPLETA */
+@media (max-width: 768px) {
+  #capa {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)),
+                url("Capa.jpeg") center/contain no-repeat fixed;
+    background-size: contain;
+  }
+}
+#os-noivos h2 {
+  color:#000000;  /* Dourado */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+/* CORAÇÕES FLUTUANTES - EFEITO PREMIUM */
+.heart-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;  /* Não interfere nos cliques */
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -50px;
+  font-size: 0;
+  opacity: 0;
+  animation: floatHeart 12s ease-in-out forwards;
+  pointer-events: none;
+}
+
+.floating-heart i {
+  font-size: 0;
+  color: rgba(54, 34, 24, 0.7);  /* Cinza escuro translúcido */
+  transition: all 0.3s ease;
+}
+
+/* Animações diferentes para cada coração */
+@keyframes floatHeart {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateX(var(--move-x, 50px)) translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Responsivo - esconder em dispositivos muito lentos se necessário */
+@media (max-width: 768px) {
+  .floating-heart i {
+    font-size: 0;
   }
 }
 </style>
@@ -2392,7 +2439,7 @@
               <div class="container-foto-noivo">
                 <img src="Noivo.jpeg" alt="Edmilson" class="foto-noivo" />
               </div>
-              <h3 class="nome-noivo">Edmilson</h3>
+              <h3 class="nome-noivo">Edmilson Júlio José</h3>
               <div class="linha-pais"></div>
               <p class="pais-preto">
                 <strong>Filho de:</strong><br />
@@ -2408,7 +2455,7 @@
               <div class="container-foto-noiva">
                 <img src="Noiva.jpeg" alt="Farida" class="foto-noiva" />
               </div>
-              <h3 class="nome-noiva">Farida</h3>
+              <h3 class="nome-noiva">Farida César Naheco </h3>
               <div class="linha-pais"></div>
               <p class="pais-preto">
                 <strong>Filha de:</strong><br />
@@ -2427,14 +2474,10 @@
 </div>
 <h2>Celebre Connosco</h2>
           <p class="texto-saudacao">
-            Com muito amor, temos o prazer de convidar-te a ti e ao teu
-            acompanhante para celebrar connosco este momento especial.
+            Para dar início a este novo capítulo com muito amor, convidamos-te para celebrar connosco este momento tão especial.
           </p>
 
           <div class="calendario-container">
-            <span class="texto-saudacao-destaque" style="margin-bottom: 20px"
-              >(Convite válido para duas pessoas)</span
-            >
 
             <div class="calendario-pequeno">
               <div class="cabecalho-calendario">Agosto 2026</div>
@@ -2648,6 +2691,12 @@
                 <i class="fas fa-search-plus"></i>
               </div>
             </div>
+            <div class="galeria-item-elegante" onclick="abrirModal(3)" style="--item-index: 3">
+    <img src="Foto5.jpeg" alt="Edmilson e Farida" class="galeria-img-elegante" />
+    <div class="galeria-overlay">
+      <i class="fas fa-search-plus"></i>
+    </div>
+  </div>
         </div>
       </section>
 
@@ -2907,8 +2956,8 @@
           <i class="fas fa-mobile-alt"></i>
           <div>
             <strong style="font-size: 1.2rem">M-Pesa</strong><br />
-            <span style="font-size: 1.1rem">+258 84 421 7319</span><br />
-            <em style="color: var(--cinza-medio)">(Titular: Farida</em>
+            <span style="font-size: 1.1rem">+258 84 348 1043</span><br />
+            <em style="color: var(--cinza-medio)">(Titular: Edmilson José</em>
           </div>
         </div>
 
@@ -2916,21 +2965,19 @@
           <i class="fas fa-wallet"></i>
           <div>
             <strong style="font-size: 1.2rem">E-Mola</strong><br />
-            <span style="font-size: 1.1rem">+258 87 048 1043</span><br />
-            <em style="color: var(--cinza-medio)">(Titular: Edmilson)</em>
+            <span style="font-size: 1.1rem">+258 87 067 2972</span><br />
+            <em style="color: var(--cinza-medio)">(Titular: Farida Naheco)</em>
           </div>
         </div>
 
-        <div class="metodo-pagamento-elegante">
-          <i class="fas fa-university"></i>
-          <div>
-            <strong style="font-size: 1.2rem">Millennium BIM</strong><br />
-            <span style="font-size: 1.1rem">000000010000458397</span><br />
-            <em style="color: var(--cinza-medio)"
-              >(Titular: Casal Edmilson e Farida</em
-            >
-          </div>
-        </div>
+       <div class="metodo-pagamento-elegante">
+  <i class="fas fa-university"></i>
+  <div>
+    <strong style="font-size: 1.2rem">BCI</strong><br />
+    <span style="font-size: 1rem"> <strong>Número de Conta:</strong> 31298873710001</span><br />
+    <span style="font-size: 1rem"> <strong>NIB:</strong> 000800001298873710128</span><br />
+  </div>
+</div>
       </div>
     </div>
 
@@ -3408,7 +3455,7 @@ musicaFundo.addEventListener("ended", function() {
 const imagensGaleria = [
   "Foto3.jpeg",
   "Foto4.jpeg",
-  "Capa.jpeg",
+  "Capa.jpeg", "Foto5.jpeg",
 ];
 
 function abrirModal(indice) {
@@ -3899,6 +3946,77 @@ const galeriaSectionEscrivaninha = document.getElementById('galeria');
 if (galeriaSectionEscrivaninha) {
   observerEscrivaninha.observe(galeriaSectionEscrivaninha);
 }
+// CORAÇÕES FLUTUANTES - EFEITO PREMIUM
+function criarCoracaoFlutuante() {
+  const heartContainer = document.createElement('div');
+  heartContainer.className = 'heart-container';
+  document.body.appendChild(heartContainer);
+  
+  const intensidade = 5; // Apenas 3 corações por vez
+  
+  function adicionarCoracao() {
+    const heart = document.createElement('div');
+    heart.className = 'floating-heart';
+    
+    // Criar ícone de coração
+    const icon = document.createElement('i');
+    icon.className = 'fas fa-heart';
+    
+    // Tamanhos pequenos e variados (8px a 16px)
+    const tamanhos = [8, 10, 12, 14, 16];
+    const tamanho = tamanhos[Math.floor(Math.random() * tamanhos.length)];
+    icon.style.fontSize = tamanho + 'px';
+    
+    // Posição horizontal aleatória (0% a 100%)
+    const leftPos = Math.random() * 100;
+    heart.style.left = leftPos + '%';
+    heart.style.bottom = '-30px';
+    
+    // Movimento horizontal aleatório (-80px a 80px)
+    const moveX = (Math.random() - 0.5) * 160;
+    heart.style.setProperty('--move-x', moveX + 'px');
+    
+    // Duração da animação (10s a 16s - lento)
+    const duracao = 6 + Math.random() * 5;
+    heart.style.animationDuration = duracao + 's';
+    
+    // Delay inicial aleatório (0s a 8s)
+    const delay = Math.random() * 8;
+    heart.style.animationDelay = delay + 's';
+    
+    heart.appendChild(icon);
+    heartContainer.appendChild(heart);
+    
+    // Remover o elemento após a animação terminar
+    setTimeout(() => {
+      if (heart && heart.parentNode) {
+        heart.remove();
+      }
+    }, (duracao + delay) * 1000);
+  }
+  
+  // Iniciar com 3 corações
+  for (let i = 0; i < intensidade; i++) {
+    setTimeout(() => {
+      adicionarCoracao();
+    }, i * 1500);
+  }
+  
+  // Continuar adicionando corações
+  setInterval(() => {
+    const coracoesAtivos = document.querySelectorAll('.floating-heart').length;
+    if (coracoesAtivos < intensidade) {
+      adicionarCoracao();
+    }
+  }, 1500);
+}
+
+// Iniciar o efeito após a página carregar
+window.addEventListener('load', function() {
+  setTimeout(() => {
+    criarCoracaoFlutuante();
+  }, 500);
+});
     </script>
     <!-- BOTÃO FLUTUANTE DE MÚSICA -->
 <div id="botaoMusica" class="botao-musica-flutuante">
