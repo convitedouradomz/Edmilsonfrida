@@ -157,25 +157,24 @@
       }
 
       /* CAPA */
-      #capa {
-        background:
-          linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)),
-          url("Capa.jpeg") center/contain no-repeat fixed;
-        color: var(--branco);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-        position: relative;
-        overflow: hidden;
-        opacity: 1 !important;
-        transform: none !important;
-        transition: opacity 0.8s ease !important;
-      }
-
+     /* CAPA */
+#capa {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)),
+              url("Capa.jpeg") center/cover no-repeat fixed;
+  color: var(--branco);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.8s ease !important;
+}
       #capa.oculto {
         display: none !important;
       }
@@ -346,7 +345,7 @@
 
       /* MÚSICA E FOTO - SCROLL 2 (COM ANÉIS) */
       #musica {
-        background-color: #eee2b4;
+        background-color: #e2d7cc;
         position: relative;
         overflow: hidden;
       }
@@ -562,7 +561,7 @@
 
       /* TEXTO ROMÂNTICO - SCROLL 3 */
      #texto-romantico {
-  background: #eee2b4;
+  background: #e2d7cc;
   position: relative;
   overflow: hidden;
 }
@@ -620,7 +619,7 @@
 
       /* SAUDAÇÃO - SCROLL 4 */
       #saudacao {
-        background-color: #eee2b4;
+        background-color: #e2d7cc;
         position: relative;
       }
 
@@ -862,7 +861,7 @@
       .nome-noiva {
         font-family: "Playfair Display", serif;
         font-size: 1.8rem;
-        color: #000000;
+        color: #ffffff;
         margin-bottom: 10px;
         letter-spacing: 0.5px;
       }
@@ -925,7 +924,7 @@
 
       /* AGENDA - SCROLL 6 (COM ANIMAÇÃO ZIG-ZAG) */
       #agenda {
-        background-color: #eee2b4;
+        background-color: #e2d7cc;
         position: relative;
       }
 
@@ -1163,7 +1162,7 @@
 
       /* CONTADOR - SCROLL 7 */
       #contador {
-  background: #eee2b4;
+  background: #e2d7cc;
   position: relative;
   overflow: hidden;
 }
@@ -1238,7 +1237,7 @@
       /* GALERIA - SCROLL 8 (COM EFEITO PANORAMA) */
       /* GALERIA - SCROLL 8 */
 #galeria {
-  background-color: var(--creme-claro);
+  background-color: #e2d7cc;
   position: relative;
 }
 
@@ -1367,7 +1366,7 @@
 
       /* RSVP - SCROLL 9 */
       #rsvp {
-        background-color: #eee2b4;
+        background-color: #e2d7cc;
         position: relative;
       }
 
@@ -1413,7 +1412,7 @@
 
       /* MENSAGENS - SCROLL 10 (COM SISTEMA DE ABAS) */
      #mensagens {
-  background: #eee2b4;
+  background: #e2d7cc;
   position: relative;
 }
 
@@ -1704,7 +1703,7 @@
 
       /* PRESENTES - SCROLL 11 */
       #presentes {
-        background-color: #eee2b4;
+        background-color: #e2d7cc;
         position: relative;
       }
 
@@ -1942,16 +1941,16 @@
 
       /* TEXTO DOS PAIS COM LETRA PRETA */
       .pais-preto {
-        font-size: 1.2rem;
-        color: #000000 !important;
+        font-size: 1.4rem;
+        color: #ffffff !important;
         text-align: center;
         line-height: 1.6;
         margin-top: 8px;
       }
 
       .pais-preto strong {
-        color: #000000;
-        font-weight: 600;
+        color: #ffffff;
+        font-weight: 650;
       }
 
       /* ESTILOS PARA LISTA DE PRESENTES */
@@ -2281,8 +2280,8 @@
 @media (max-width: 768px) {
   #capa {
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)),
-                url("Capa.jpeg") center/contain no-repeat fixed;
-    background-size: contain;
+                url("Capa.jpeg") center/cover no-repeat fixed;
+    background-size: cover;  /* Preenche toda a tela */
   }
 }
 #os-noivos h2 {
